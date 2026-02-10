@@ -7,7 +7,7 @@ export default function SideBar(props) {
         <div className="sidebarcontents">
           <h2>{data?.title}</h2>
           <div>
-            <p>{data?.date}</p>
+            {data ? <p>{data?.date}</p> : <p>Loading...</p>}
             <p>{data?.explanation}</p>
           </div>
           <button onClick={handleToggleModal}>
